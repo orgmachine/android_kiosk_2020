@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp">
+
+
+                <TextView
+                    android:id="@+id/title_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Enter your details"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorDarkPrimary"
+                    android:textSize="20sp" />
+
+
+                <LinearLayout
+                    android:id="@+id/details_inp_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title_text"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginRight="100dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/tv_name_lbl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dp"
+                            android:layout_weight="3"
+                            android:fontFamily="sans-serif-medium"
+                            android:padding="10dp"
+                            android:text="Name*"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/textColorDarkPrimary"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/et_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="40dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_border"
+                            android:imeOptions="actionNext"
+                            android:inputType="textCapWords"
+                            android:lines="1"
+                            android:padding="10dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/tv_age_lbl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dp"
+                            android:layout_weight="3"
+                            android:fontFamily="sans-serif-medium"
+                            android:padding="10dp"
+                            android:text="Date Of Birth*"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/textColorDarkPrimary"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/et_age"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="40dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_border"
+                            android:imeOptions="actionNext"
+                            android:lines="1"
+                            android:padding="10dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:id="@+id/ll_mobile"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/tv_mobile_lbl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dp"
+                            android:layout_weight="3"
+                            android:fontFamily="sans-serif-medium"
+                            android:padding="10dp"
+                            android:text="Mobile"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/textColorDarkPrimary"
+                            android:textSize="16sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="40dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <com.rilixtech.CountryCodePicker
+                                android:id="@+id/country_picker"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="20dp"
+                                android:layout_weight="2"
+                                android:background="@drawable/edittext_border"
+                                android:padding="10dp"
+                                app:ccp_defaultNameCode="IN"
+                                app:ccp_textSize="16sp" />
+
+                            <EditText
+                                android:id="@+id/et_mobile"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerHorizontal="true"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_border"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:padding="10dp"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:id="@+id/ll_email"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/tv_email_lbl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dp"
+                            android:layout_weight="3"
+                            android:fontFamily="sans-serif-medium"
+                            android:padding="10dp"
+                            android:text="Email"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/textColorDarkPrimary"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/et_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="40dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_border"
+                            android:imeOptions="actionDone"
+                            android:inputType="textEmailAddress"
+                            android:lines="1"
+                            android:padding="10dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/tv_gender_lbl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dp"
+                            android:layout_weight="3"
+                            android:fontFamily="sans-serif-medium"
+                            android:padding="10dp"
+                            android:text="Gender*"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/textColorDarkPrimary"
+                            android:textSize="16sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="40dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <RadioGroup
+                                android:id="@+id/rg_gender"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rb_male"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="20dp"
+                                    android:checked="true"
+                                    android:drawableTop="@drawable/bg_male"
+                                    android:text="Male"
+                                    android:textAlignment="center" />
+
+                                <RadioButton
+                                    android:id="@+id/rb_female"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="20dp"
+                                    android:drawableTop="@drawable/bg_female"
+                                    android:text="Female"
+                                    android:textAlignment="center" />
+
+                                <RadioButton
+                                    android:id="@+id/rb_other"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:drawableTop="@drawable/bg_other"
+                                    android:text="Other"
+                                    android:textAlignment="center" />
+                                <!--android:button="@android:color/transparent"-->
+                            </RadioGroup>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/terms_and_conditions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <!--                <TextView-->
+                        <!--                    android:layout_width="match_parent"-->
+                        <!--                    android:layout_height="wrap_content"-->
+                        <!--                    android:layout_marginLeft="40dp"-->
+                        <!--                    android:layout_weight="3"-->
+                        <!--                    android:fontFamily="sans-serif-medium"-->
+                        <!--                    android:padding="10dp"-->
+                        <!--                    android:text="Gender"-->
+                        <!--                    android:textAlignment="textStart"-->
+                        <!--                    android:textColor="@color/textColorDarkPrimary"-->
+                        <!--                    android:textSize="16sp"-->
+                        <!--                    android:visibility="invisible" />-->
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="40dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/terms_checkbox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/transparent" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btn_terms_conditions"
+                                style="@style/Widget.MaterialComponents.Button.TextButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/white"
+                                android:fontFamily="sans-serif"
+                                android:letterSpacing="0.04"
+                                android:text="@string/i_agree_to_terms_and_conditions"
+                                android:textAlignment="viewStart"
+                                android:textAllCaps="false"
+                                android:textColor="#3a3a3a"
+                                android:textSize="14sp"
+                                android:textStyle="normal" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:id="@+id/tnc"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/colorPrimary"
+                                android:text="@string/terms_and_conditions"
+                                android:layout_height="match_parent"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="56dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/check_railway_employee"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@color/transparent" />
+
+                            <TextView
+                                android:id="@+id/railway_employee"
+                                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/white"
+                                android:fontFamily="sans-serif"
+                                android:letterSpacing="0.04"
+                                android:text="Check if Railway Employee"
+                                android:textAlignment="viewStart"
+                                android:textAllCaps="false"
+                                android:textColor="#3a3a3a"
+                                android:textSize="14sp"
+                                android:textStyle="normal" />
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/details_inp_container"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:visibility="visible">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_continue_guest"
+                        android:layout_width="220dp"
+                        android:layout_height="60dp"
+                        android:layout_marginRight="20dp"
+                        style="@style/Widget.MaterialComponents.Button"
+                        app:rippleColor="@color/black_semi_transparent"
+                        android:text="Continue as guest"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_register"
+                        android:layout_width="220dp"
+                        android:layout_height="60dp"
+                        style="@style/Widget.MaterialComponents.Button"
+                        app:rippleColor="@color/black_semi_transparent"
+                        android:layout_toRightOf="@+id/btn_continue_guest"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:text="Register"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

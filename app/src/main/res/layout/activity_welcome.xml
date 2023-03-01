@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/top_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Welcome to YoloHealth"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="300dp"
+
+                android:layout_height="300dp"
+                android:src="@drawable/home_illustration" />
+
+
+            <LinearLayout
+                android:id="@+id/layout_btns"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:paddingLeft="200dp"
+                android:paddingRight="200dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_new_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    style="@style/Widget.MaterialComponents.Button"
+                    app:rippleColor="@color/black_semi_transparent"
+                    android:text="New User"
+                    android:gravity="center"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_existing_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_weight="1"
+                    style="@style/Widget.MaterialComponents.Button"
+                    app:rippleColor="@color/black_semi_transparent"
+                    android:textSize="18sp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:text="Existing User"
+                    android:gravity="center"
+                    android:layout_gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:textColor="@color/white" />
+
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/attendant_app"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_margin="15dp"
+                android:layout_gravity="end"
+                android:padding="10dp"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:strokeColor="@color/colorPrimaryLight"
+                app:cornerRadius="30dp"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textAllCaps="false"
+                android:text="@string/attendant_app_signin" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

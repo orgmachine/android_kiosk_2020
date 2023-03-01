@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:padding="10dp"
+    android:gravity="center_vertical"
+    android:layout_height="104dp">
+
+
+    <ImageView
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginLeft="25dp"
+        android:id="@+id/profile_image"
+        android:src="@drawable/bg_female"
+        android:background="@drawable/circular_image"
+
+        />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="20dp"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:id="@+id/name"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="#707070"
+                android:text="Dr. Kamlesh"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#0049ee"
+                android:textSize="14sp"
+                android:id="@+id/see_profile"
+                android:text="SEE PROFILE"/>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        android:id="@+id/specialization"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_weight="1"
+        android:textColor="#a7a7a7"
+        android:text="Orthopeditrician "/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:id="@+id/doc_timings"
+        android:textAlignment="center"
+        android:layout_weight="1"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="#707070"
+        android:text="9am-6pm (Mon to Fri)"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:id="@+id/fees"
+        android:textAlignment="center"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_weight="1"
+        android:textColor="#707070"
+        android:text="₹ 230.00"/>
+
+    <Button
+        android:id="@+id/see_slots"
+        android:paddingLeft="22dp"
+        android:paddingRight="22dp"
+        android:layout_width="121dp"
+        app:cornerRadius="0dp"
+        android:textSize="18sp"
+        android:layout_marginRight="10dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_height="55dp"
+        android:layoutDirection="rtl"
+        android:textColor="@color/white"
+        android:text="Next"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        app:icon="@drawable/left_arrow"
+        />
+</LinearLayout>

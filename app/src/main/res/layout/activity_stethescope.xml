@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/box_inset_layout_padding"
+    tools:context=".ui.activities.StethescopeActivity">
+
+    <include
+        layout="@layout/toolbar"
+        android:id="@+id/top_bar" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="25dp"
+        android:padding="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="50dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/layout_instruction"
+                android:padding="40dp"
+                android:layout_above="@id/layout_button"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="Instructions"
+                    android:textSize="24sp"
+                    android:padding="5dp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/tv_instruction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="@color/textColorDarkPrimary"
+                    android:text="@string/audio_instruction"
+                    android:padding="5dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="300dp"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:layout_height="wrap_content"
+                android:id="@+id/rl_result"
+                android:visibility="invisible"
+                android:orientation="vertical"
+                android:padding="24dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:id="@+id/play_time"
+                    android:textAlignment="center"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/colorAccent"
+                    android:layout_height="wrap_content"/>
+                <SeekBar
+                    android:layout_width="match_parent"
+                    android:id="@+id/seekbar"
+                    android:layout_height="wrap_content"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:id="@+id/play"
+                    android:text="playback"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:hint="describe the audio"
+                    android:layout_width="match_parent"
+                    android:id="@+id/description"
+                    android:textAlignment="center"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_button"
+                android:layout_alignParentBottom="true">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/start"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:visibility="visible"
+                    android:layout_marginRight="20dp"
+                    android:backgroundTintMode="@color/white"
+                    android:shadowColor="@color/colorPrimaryLight"
+                    android:text="START TEST"
+                    android:layout_marginBottom="20dp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/colorAccent"
+                    android:textStyle="bold"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/retry"
+
+                    style="@style/Widget.MaterialComponents.Button"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="20dp"
+                    android:visibility="gone"
+                    android:backgroundTintMode="@color/colorPrimary"
+                    android:shadowColor="@color/colorPrimaryLight"
+                    android:text="Retry"
+                    android:layout_marginBottom="20dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:rippleColor="@color/black_semi_transparent"
+                    app:strokeColor="@color/colorPrimary" />
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/confirm"
+
+                    style="@style/Widget.MaterialComponents.Button"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="20dp"
+                    android:backgroundTintMode="@color/colorPrimary"
+                    android:shadowColor="@color/colorPrimaryLight"
+                    android:text="Upload"
+                    android:visibility="gone"
+                    android:layout_marginBottom="20dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:rippleColor="@color/black_semi_transparent"
+                    app:strokeColor="@color/colorPrimary" />
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

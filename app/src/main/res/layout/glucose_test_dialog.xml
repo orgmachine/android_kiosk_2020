@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginRight="150dp"
+        android:padding="20dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Your Glucose Value"
+            android:textColor="@color/textColorLightPrimary"
+            android:layout_marginTop="20dp"
+            android:textAlignment="center"
+            android:imeOptions="actionDone"
+            android:textSize="30sp"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="sans-serif-medium" />
+
+
+        <LinearLayout
+            android:layout_width="500dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:gravity="center"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Glucose"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:visibility="invisible"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/et_kg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                android:id="@+id/tv_kg"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="In mg/dl"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:padding="10dp" />
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_enter"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:padding="10dp"
+            style="@style/Widget.MaterialComponents.Button"
+            app:rippleColor="@color/black_semi_transparent"
+            android:layout_gravity="center_horizontal"
+            android:text="SUBMIT"
+            android:backgroundTint="@color/colorAccent"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/white"
+            android:visibility="visible"
+            android:shadowColor="@color/colorPrimaryLight" />
+
+    </LinearLayout>
+
+</LinearLayout>

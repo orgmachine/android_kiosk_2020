@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:padding="20dp"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="match_parent"
+        android:text="20th Jan 2020"
+        android:textAlignment="center"
+        android:visibility="gone"
+        android:id="@+id/datetext"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/ll_container"
+        android:layoutDirection="ltr"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:gravity="end"
+        android:id="@+id/senderll"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/chat_sender"
+            android:text="You"
+            android:paddingTop="8dp"
+            android:textColor="@color/black"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/chat_time"
+            android:textSize="10sp"
+            android:text="2:00 AM"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/chat_bubble"
+        android:background="@drawable/bg_chat_left"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="20dp"
+            android:visibility="invisible"
+            android:layout_centerVertical="true"
+            android:id="@+id/pdf_image"
+            android:layout_toLeftOf="@id/ll_pdf"
+            android:layout_below="@id/attachment_image"
+            android:src="@drawable/blue_doc"
+            android:layout_height="20dp"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:id="@+id/attachment_image"
+            android:visibility="gone"
+            android:layout_height="200dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/ll_pdf"
+            android:layout_below="@id/attachment_image"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/chat_text"
+                android:paddingLeft="17dp"
+                android:lineHeight="30dp"
+                android:gravity="center_vertical"
+                android:textColor="#292929"
+                android:layout_above="@id/chat_time"
+                android:textSize="22sp"
+                android:paddingRight="17dp"
+                android:paddingTop="5.68dp"
+                android:text="Hey this is a ca chat "
+                android:paddingBottom="5.68dp"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

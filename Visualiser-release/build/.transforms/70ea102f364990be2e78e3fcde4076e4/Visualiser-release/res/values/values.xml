@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ayuback">#1DA1F2</color>
+    <color name="played">#14EF2D</color>
+    <string name="app_name">Visualiser</string>
+    <declare-styleable name="AyuVisualizerView">
+        <attr format="dimension" name="strokeWidth"/>
+        <attr format="color" name="gridColor"/>
+        <attr format="dimension" name="gridWidth"/>
+        <attr format="integer" name="verticalGridLines"/>
+        <attr format="integer" name="horizontalGridLines"/>
+        <attr format="color" name="bufferColor"/>
+        <attr format="color" name="playedColor"/>
+        <attr format="color" name="verticalSepColor"/>
+        <attr format="dimension" name="verticalSepWidth"/>
+        <attr format="color" name="horizontalSepColor"/>
+        <attr format="dimension" name="horizontalSepWidth"/>
+        <attr format="boolean" name="drawGrid"/>
+    </declare-styleable>
+</resources>

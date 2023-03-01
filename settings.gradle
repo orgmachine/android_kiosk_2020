@@ -1,0 +1,4 @@
+include ':AudioPresenter-release'
+include ':AudioPresenter-release (1)'
+include ':Visualiser-release'
+include ':app'

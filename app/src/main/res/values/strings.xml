@@ -1,0 +1,185 @@
+<resources>
+    <string name="app_name">YH Kiosk</string>
+    <string name="height_instruction">1. Remove your shoes and socks.
+\n2. Stand under the height sensor.
+\n3. Make sure the laser is falling on top of the head before clicking on start.
+\n4. Click the start button and wait for the reading.
+\n5. If you can\'t see the laser pointer, please check the height sensor batteries.
+    </string>
+    <string name="weight_instruction">1. Remove your shoes and socks.
+        \n2. Click the start button.
+        \n3. Stand on the weighing scale.
+        \n4. Weight till you see a \'yes\' on the weighing scale
+    </string>
+    <string name="bloodpressure_instruction">1.Take the BP device from the side of the kiosk.
+        \n2. Roll up your sleeves.
+        \n3. Place the arm cuff on the left upper arm and tighten.
+        \n4. Turn on the BP device by pressing On/Off button.
+        \n5. Click the start button on BP device and wait for the reading.
+        \n6. Once you get the reading on BP device, click "Read Data" button on Kiosk.</string>
+    <string name="bloodpressure_new_instruction">1.Take the BP device from the side of the kiosk.
+        \n2. Roll up your sleeves.
+        \n3. Place the arm cuff on the left upper arm and tighten.
+        \n4. Turn on the BP device by pressing [ S | T ] button.
+        \n5. Click the start test button on the screen.
+        \n6. Once the screen shows measuring, press the [ S | T ] button on the device again to start it </string>
+    <string name="pulse_instruction">1. Take the pulse oximeter from the side of the kiosk.
+\n2. Open clip, place finger inside and close clip.
+\n3. Press power button on oximeter.
+\n4. Wait for the reading.
+        \n5. Remove the clip from finger once you get the reading on device.
+    \n6. Click the "Read Data" button on Kiosk.</string>
+    <string name="pulse_instruction_ble">1. Take the pulse oximeter from the side of the kiosk.
+\n2. Open clip, place finger inside and close clip.
+\n3. Press power button on oximeter.
+    \n4. Click the "START" button on Kiosk.
+    \n5. Wait for the results to show on Kiosk.</string>
+    <string name="audio_instruction">1. Take the stethoscope and connect it to the kiosk.
+\n2. Press the button on the stethoscope so that the LED is green.
+\n3. Press start button on the screen, a dialog should appear.
+    \n4. Place the stethoscope on patients chest and press start recording.
+    \n5. Once the recording is done, press stop recording</string>
+    <string name="temperature_instruction">1. Take the thermometer from the side of the kiosk.
+\n2. Remove the protection cap.
+\n3. Slightly touch the inner Ear with the probe.
+\n4. Click on the Start button on screen
+\n5. Press the start measurement key on the thermometer and wait for reading.</string>
+    <string name="glucose_instruction">1. Put the strip in glucometer and wait for it to turn on.
+\n2. Put the blood sample on the tip of the strip.
+\n3. Wait for the reading to appear on the glucometer device
+\n4. Pull the strip out of the device.
+\n5. Click on read data
+\n6. Wait for the device to display reading.</string>
+    <string name="dermascope_instruction">1. Plug in the dermascope and wait for it to be detected.
+\n2. Place the dermascope at the appropirate point on your skin.
+\n3. When the image on screen is in focus, press the capture Image button.
+    </string>
+    <string name="haemoglobin_instruction">1. Click on read data.
+\n2. Put the strip containing blood sample in the device and press till you hear a beep.
+\n3. Pull out the strip and wait for the reading to appear on the screen.</string>
+
+    <string name="spirometer_instruction">1. Take the spirometer from the side of the kiosk.
+\n2. Press power button on device.
+\n3. Click on the ready button on Screen.
+\n4. Breathe in fully and seal the lips around the mouthpiece\nand blast all air out as forcefully as possible.
+\n5. Wait for the reading.
+</string>
+    <string name="ecg_instruction">1. Take the pulse oximeter from the side of the kiosk.
+\n2. Press power button on oximeter.
+\n3. Click on the ready button on Screen.
+\n4. Place the device tightly on your wrist as indicated.
+\n5. Wait for the reading.
+</string>
+
+    <string name="empty_tests_case">It seems you have skipped the mandatory tests.
+        \nGo back and finish the mandatory tests to proceed to reports.</string>
+
+    <string name="attendant_app_signin">Have a query?
+        \nSign in attendant app!</string>
+
+    <string name="no_internet">No Internet Connection Available</string>
+    <string name="retry">Retry</string>
+    <string name="progressActivityEmptyTitlePlaceholder">Nothing here.</string>
+    <string name="progressActivityEmptyContentPlaceholder">We couldn\'t find anything. Tap the button to take your first image.</string>
+    <string name="progressActivityErrorTitlePlaceholder">No Internet Connection</string>
+    <string name="progressActivityErrorContentPlaceholder">We are unable to establish a connection with our server. Please check your internet connection.</string>
+    <string name="progressActivityErrorButton">Try Again</string>
+
+    <string name="permission_request_message">Storage permission allows us to save pdf.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="derma_test_reset">Image could not be saved, please try again</string>
+    <string name="directory_issue">Cannot create directory, to save the image please set storage settings and try again</string>
+    <string name="saving_image_issue">There was an issue saving the image, Please try again</string>
+    <string name="saving_image_succes">Save Image Successfully..</string>
+
+    <string name="direc_name">Yolohealth/images</string>
+
+    <string name="default_height_check">Please Set the Default Height</string>
+    <string name="default_height_check_title">Add Kiosk Id</string>
+    <string name="kiosk_id_check">Please add kiosk id to begin</string>
+    <string name="kiosk_id_title">Add Kiosk Id</string>
+    <string name="kiosk_id_toast">Add kiosk id to start the app</string>
+    <string name="valid_otp_check">Please enter valid OTP</string>
+
+    <string name="height_text"> Height</string>
+    <string name="weight_text"> Weight</string>
+    <string name="bp_text"> Blood Pressure</string>
+    <string name="pulse_text"> Pulse</string>
+    <string name="temp_text"> Temperature</string>
+    <string name="glucose_text"> Glucose</string>
+    <string name="hemoglobin_text"> Hemoglobin</string>
+    <string name="derma_text"> Dermascope</string>
+    <string name="autoscope_text"> Autoscope</string>
+
+
+    <string name="height_test_validation"> Please finish the height test to continue</string>
+
+
+    <string name="exit_text_text"> Do you want to exit from the check-up?</string>
+
+    <string name="enter_feet_toast"> Please Enter Feet</string>
+    <string name="enter_inch_toast"> Please Enter Inch</string>
+
+    <string name="enter_temp_toast"> Please Enter Temperature</string>
+
+
+    <string name="enter_weight_toast">Please Enter Weight</string>
+    <string name="enter_glucose_toast">Please Enter the value</string>
+    <string name="enter_syst"> Please Enter Systolic value"</string>
+    <string name="enter_diast"> Please Enter Diastolic value"</string>
+
+
+    <string name="invalid_height_toast"> Invalid Height</string>
+    <string name="invalid_weight_toast"> Invalid Weight</string>
+    <string name="invalid_temp_toast"> Invalid Temperature Value</string>
+    <string name="invalid_glucose_toast"> Invalid Entry</string>
+    <string name="invalid_syst_toast"> Invalid Systolic Value</string>
+    <string name="invalid_diast_toast"> Invalid Diastolic Value</string>
+
+
+    <string name="invalid_usb_toast"> Cannot find USB device, please cancel and try again</string>
+    <string name="reconnect_usb_toast"> "Please re-connect device and try again</string>
+
+    <string name="invalid_device_toast"> Unable to connect device. Please try again</string>
+    <string name="device_error"> Error communicating device. Please try again</string>
+
+
+    <string name="enter_value_check"> Please Enter the value</string>
+    <string name="invalid_value"> Invalid Value</string>
+    <string name="pairing_success"> Pairing Successfull</string>
+    <string name="default_height">Default Height Cannot be empty</string>
+    <string name="settings_added">Settings will be saved</string>
+    <string name="data_synced">Data synced successfully</string>
+    <string name="kiosk_registered">Kiosk Id Successfully registered</string>
+    <string name="pdf_opt_select_check">Please select one option for printer to function</string>
+    <string name="print_job_initiated">Print Job Initiated</string>
+    <string name="print_job_fail">Print Job Failed</string>
+    <string name="print_job_success">Print Job Succesfull</string>
+
+    <string name="email_error">Email Invalid!/nPlease enter a valid email</string>
+
+
+    <string name="bluetooth_scan_check_toast"> Bluetooth scan failed. Start test again</string>
+    <string name="bluetooth_scan_fail_toast"> Bluetooth connection failed. Start test again.</string>
+
+
+    <string name="read_op_success"> Read operation successful</string>
+    <string name="read_op_fail"> Failed operation</string>
+    <string name="write_fail"> White write data failed</string>
+    <string name="title_activity_stethescope">StethescopeActivity</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <string name="i_agree_to_terms_and_conditions">I agree to the</string>
+    <string name="terms_and_conditions"><u>Terms and conditions</u> *</string>
+    <string name="title_activity_e_c_g_test">ECGTestActivity</string>
+    <string name="title_activity_audio_player">AudioPlayerActivity</string>
+
+
+</resources>

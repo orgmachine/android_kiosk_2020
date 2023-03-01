@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/box_inset_layout_padding"
+    tools:context=".ui.activities.ECGTestActivity"
+    tools:deviceIds="wear">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ECG Test"
+
+            android:fontFamily="@font/my_font_family"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:id="@+id/toolbar_title"
+            android:textSize="20sp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <EditText
+        android:layout_width="200dp"
+        android:hint="Enter Height (cms)"
+        android:inputType="number"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/et_height"
+        android:layout_above="@id/et_weight"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:layout_width="200dp"
+        android:inputType="number"
+        android:hint="Enter Weight (kgs)"
+        android:id="@+id/et_weight"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/btn_ecg_start"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_centerInParent="true"
+        android:text="Start Test"
+        android:id="@+id/btn_ecg_start"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>
