@@ -241,27 +241,27 @@
                                     android:id="@+id/rb_male"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginRight="20dp"
+                                    android:layout_marginEnd="20dp"
                                     android:checked="true"
-                                    android:drawableTop="@drawable/bg_male"
-                                    android:text="Male"
+                                    android:drawableTop="@drawable/male"
+                                    android:text="@string/male"
                                     android:textAlignment="center" />
 
                                 <RadioButton
                                     android:id="@+id/rb_female"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginRight="20dp"
-                                    android:drawableTop="@drawable/bg_female"
-                                    android:text="Female"
+                                    android:layout_marginEnd="20dp"
+                                    android:drawableTop="@drawable/female"
+                                    android:text="@string/female"
                                     android:textAlignment="center" />
 
                                 <RadioButton
                                     android:id="@+id/rb_other"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:drawableTop="@drawable/bg_other"
-                                    android:text="Other"
+                                    android:drawableTop="@drawable/other"
+                                    android:text="@string/other"
                                     android:textAlignment="center" />
                                 <!--android:button="@android:color/transparent"-->
                             </RadioGroup>

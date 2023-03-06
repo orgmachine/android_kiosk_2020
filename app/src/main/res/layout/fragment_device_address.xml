@@ -8,7 +8,8 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:visibility="visible">
 
         <LinearLayout
             android:id="@+id/container_layout"
@@ -319,6 +320,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
                 android:orientation="horizontal">
 
                 <TextView
@@ -328,7 +330,7 @@
                     android:layout_gravity="center_vertical"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    android:text="Height Default Calibration (metres)"
+                    android:text="@string/height_default_calibration_metres"
                     android:textSize="16sp" />
 
 
@@ -338,7 +340,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:hint="Default Height"
+                    android:hint="@string/default_height_2"
                     android:imeOptions="actionDone">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -355,14 +357,13 @@
                     android:id="@+id/measure_height"
                     style="@style/Widget.MaterialComponents.Button"
                     android:layout_width="wrap_content"
-                    android:layout_height="50dp"
-                    android:layout_margin="3dp"
-                    android:backgroundTint="@color/colorAccent"
-                    android:padding="5dp"
+                    android:layout_height="65dp"
+                    android:layout_margin="10dp"
+                    android:backgroundTint="@color/colorSecondary"
                     android:textColor="@color/white"
-                    android:shadowColor="@color/colorPrimaryLight"
-                    android:text="Measure"
-                    android:textSize="10sp"
+                    android:shadowColor="@color/colorSecondary"
+                    android:text="@string/measure"
+                    android:textSize="11sp"
                     />
 
 
@@ -396,9 +397,9 @@
                         android:id="@+id/is_wifi"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Wifi Printer"
-                        android:layout_marginRight="10dp"
-                        android:textSize="16dp"
+                        android:text="@string/wifi_printer"
+                        android:layout_marginEnd="10dp"
+                        android:textSize="16sp"
                         android:layout_margin="5dp"
                         android:layout_weight="1"
                         android:textColor="@color/grey_700" />
@@ -409,9 +410,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
-                        android:text="Raspberry Pi"
-                        android:textSize="16dp"
+                        android:text="@string/raspberry_pi"
+                        android:textSize="16sp"
                         android:layout_weight="1"
+                        android:buttonTint="@color/colorPrimary"
                         android:textColor="@color/grey_700"
                         android:checked="true" />
 
@@ -438,7 +440,7 @@
                     android:backgroundTint="@color/colorPrimary"
                     android:padding="10dp"
                     android:shadowColor="@color/colorPrimaryLight"
-                    android:text="SYNC"
+                    android:text="@string/sync"
                     android:textSize="18sp"
                     app:rippleColor="@color/black_semi_transparent" />
 
@@ -450,10 +452,10 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:layout_weight="2"
-                    android:backgroundTint="@color/colorAccent"
+                    android:backgroundTint="@color/colorSecondary"
                     android:padding="10dp"
                     android:shadowColor="@color/colorPrimaryLight"
-                    android:text="SUBMIT"
+                    android:text="@string/submit"
                     android:textSize="18sp"
                     app:rippleColor="@color/black_semi_transparent" />
 
@@ -468,7 +470,7 @@
                     app:rippleColor="@color/black_semi_transparent"
                     android:backgroundTintMode="@color/colorPrimary"
                     app:strokeColor="@color/colorPrimary"
-                    android:text="UPDATE APP"
+                    android:text="@string/update_app"
                     android:textStyle="bold"
                     android:visibility="visible"
                     android:textColor="@color/white">
@@ -483,28 +485,35 @@
         </LinearLayout>
     </ScrollView>
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/access_denied_container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
         android:visibility="gone">
-
         <ImageView
             android:id="@+id/error_image"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="50dp"
-            android:src="@drawable/ic_home_illustration" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="50dp"
+            android:src="@drawable/retry" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="visible">
+
 
         <TextView
             android:id="@+id/access_denied_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/error_image"
-            android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
-            android:text="This Page can only be accessed by the Admin"
+            android:textSize="18sp"
+            android:text="@string/this_page_can_only_be_accessed_by_the_admin"
             android:textStyle="bold" />
 
         <com.google.android.material.button.MaterialButton
@@ -512,14 +521,13 @@
             style="@style/Widget.MaterialComponents.Button"
             android:layout_width="180dp"
             android:layout_height="60dp"
-            android:layout_below="@+id/access_denied_text"
-            android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
             android:padding="5dp"
             android:shadowColor="@color/colorPrimaryLight"
-            android:text="RETRY"
+            android:text="@string/retry"
             android:textSize="16sp"
             app:rippleColor="@color/black_semi_transparent" />
 
-    </RelativeLayout>
+    </LinearLayout>
+    </LinearLayout>
 </RelativeLayout>

@@ -74,8 +74,7 @@
     <string name="empty_tests_case">It seems you have skipped the mandatory tests.
         \nGo back and finish the mandatory tests to proceed to reports.</string>
 
-    <string name="attendant_app_signin">Have a query?
-        \nSign in attendant app!</string>
+    <string name="attendant_app_signin">Have a query? Sign in attendant app!</string>
 
     <string name="no_internet">No Internet Connection Available</string>
     <string name="retry">Retry</string>
@@ -180,6 +179,38 @@
     <string name="terms_and_conditions"><u>Terms and conditions</u> *</string>
     <string name="title_activity_e_c_g_test">ECGTestActivity</string>
     <string name="title_activity_audio_player">AudioPlayerActivity</string>
+    <string name="existing_user">Existing User</string>
+    <string name="new_user">New User</string>
+    <string name="welcome_to_yolohealth">Welcome to YoloHealth</string>
+    <string name="enter">Enter</string>
+    <string name="enter_your_password">Enter Your Password</string>
+    <string name="kiosk_id">Kiosk Id</string>
+    <string name="issued_to">Issued To:</string>
+    <string name="expiry_date">Expiry Date:</string>
+    <string name="login">LOGIN</string>
+    <string name="logout">LOGOUT</string>
+    <string name="measure">Measure</string>
+    <string name="height_default_calibration_metres">Height Default Calibration (metres)</string>
+    <string name="default_height_2">Default Height</string>
+    <string name="submit">SUBMIT</string>
+    <string name="sync">SYNC</string>
+    <string name="update_app">UPDATE APP</string>
+    <string name="raspberry_pi">Raspberry Pi</string>
+    <string name="wifi_printer">Wifi Printer</string>
+    <string name="this_page_can_only_be_accessed_by_the_admin">This Page can only be accessed by the Admin</string>
+    <string name="check_printer_status">Check Printer Status</string>
+    <string name="printer_availaibility">Printer Availaibility:</string>
+    <string name="device_config_status">Device Config Status:</string>
+    <string name="app_version">App Version</string>
+    <string name="one">1</string>
+    <string name="internet_availability">Internet Availability:</string>
+    <string name="server_availaibility">Server Availaibility:</string>
+    <string name="bluetooth_availaibility">Bluetooth Availaibility:</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="other">Other</string>
+    <string name="login_caps">LOGIN</string>
+    <string name="phone_number">Phone number</string>
 
 
 </resources>

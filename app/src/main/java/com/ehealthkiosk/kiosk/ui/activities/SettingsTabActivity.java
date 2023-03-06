@@ -3,6 +3,7 @@ package com.ehealthkiosk.kiosk.ui.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 import androidx.appcompat.widget.Toolbar;
@@ -34,10 +35,10 @@ public class SettingsTabActivity extends BaseActivity {
     private TabPagerAdapter mPagerAdapter;
 
     private int[] tabIcons = {
-            R.drawable.ic_kiosk,
-            R.drawable.ic_peripherals,
-            R.drawable.ic_faq,
-            R.drawable.ic_faq,
+            R.drawable.kiosk,
+            R.drawable.devices,
+            R.drawable.diagnosis,
+            R.drawable.faqs,
     };
 
 
@@ -51,6 +52,7 @@ public class SettingsTabActivity extends BaseActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         toolbarTitle.setText("Settings");
         showSystemUI();

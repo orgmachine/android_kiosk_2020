@@ -5,9 +5,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
-    <include
-        android:id="@+id/top_bar"
-        layout="@layout/top_toolbar" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="333dp"
+            android:layout_height="63dp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/newsplash" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/new_settings" />
+    </RelativeLayout>
+
 
     <ScrollView
         android:layout_width="match_parent"
@@ -20,25 +38,12 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:gravity="center"
-                android:padding="10dp"
-                android:text="Welcome to YoloHealth"
-                android:textColor="@color/black"
-                android:textSize="30sp"
-                android:textStyle="bold" />
-
 
             <ImageView
                 android:id="@+id/imageView1"
                 android:layout_width="300dp"
-
                 android:layout_height="300dp"
                 android:src="@drawable/home_illustration" />
-
 
             <LinearLayout
                 android:id="@+id/layout_btns"
@@ -56,7 +61,7 @@
                     android:layout_weight="1"
                     style="@style/Widget.MaterialComponents.Button"
                     app:rippleColor="@color/black_semi_transparent"
-                    android:text="New User"
+                    android:text="@string/new_user"
                     android:gravity="center"
                     android:layout_gravity="center_horizontal"
                     android:textSize="18sp"
@@ -67,14 +72,14 @@
                     android:id="@+id/btn_existing_user"
                     android:layout_width="wrap_content"
                     android:layout_height="70dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginLeft="50dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="50dp"
                     android:layout_weight="1"
                     style="@style/Widget.MaterialComponents.Button"
                     app:rippleColor="@color/black_semi_transparent"
                     android:textSize="18sp"
-                    android:backgroundTint="@color/colorPrimary"
-                    android:text="Existing User"
+                    android:backgroundTint="@color/colorSecondary"
+                    android:text="@string/existing_user"
                     android:gravity="center"
                     android:layout_gravity="center_horizontal"
                     android:textStyle="bold"
@@ -83,21 +88,17 @@
 
             </LinearLayout>
 
-            <com.google.android.material.button.MaterialButton
+            <TextView
                 android:id="@+id/attendant_app"
-                android:layout_width="wrap_content"
-                android:layout_height="70dp"
-                android:layout_margin="15dp"
-                android:layout_gravity="end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
                 android:padding="10dp"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                app:strokeColor="@color/colorPrimaryLight"
-                app:cornerRadius="30dp"
-                android:textColor="@color/black"
-                android:textSize="12sp"
-                android:textAllCaps="false"
-                android:text="@string/attendant_app_signin" />
-
+                android:text="@string/attendant_app_signin"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"/>
 
         </LinearLayout>
 

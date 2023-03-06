@@ -3,6 +3,7 @@ package com.ehealthkiosk.kiosk.ui.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.WindowManager;
 
 import com.ehealthkiosk.kiosk.R;
 import com.ehealthkiosk.kiosk.ui.activities.login.LoginActivity;
@@ -28,6 +29,7 @@ public class SplashActivity extends BaseActivity {
 //        startLockTask();
         setContentView(R.layout.activity_splash);
         ButterKnife.bind(this);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         if (!isTaskRoot()) {
             final Intent intent = getIntent();

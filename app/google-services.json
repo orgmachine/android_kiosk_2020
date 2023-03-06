@@ -1,34 +1,33 @@
 {
   "project_info": {
-    "project_number": "1021013588093",
-    "firebase_url": "https://yolohealth-kiosk.firebaseio.com",
-    "project_id": "yolohealth-kiosk",
-    "storage_bucket": "yolohealth-kiosk.appspot.com"
+    "project_number": "342375077539",
+    "project_id": "yolo-health-new",
+    "storage_bucket": "yolo-health-new.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1021013588093:android:6190f82d67ac0266c51914",
+        "mobilesdk_app_id": "1:342375077539:android:c64349c3b45f2823e51116",
         "android_client_info": {
           "package_name": "com.ehealthkiosk.kiosk"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1021013588093-i9lqc2ij7n4ciqudkhbpmobtht4nj4et.apps.googleusercontent.com",
+          "client_id": "342375077539-22belehlu9rr9j4pcihllbmhu0sv82t9.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAV4BExzFPrBpqWTLK4rTwA2KRxuqZ1uhU"
+          "current_key": "AIzaSyBRt6Wq0XwJysYD01A5jzHT_5vEcfWLS9E"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1021013588093-i9lqc2ij7n4ciqudkhbpmobtht4nj4et.apps.googleusercontent.com",
+              "client_id": "342375077539-22belehlu9rr9j4pcihllbmhu0sv82t9.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

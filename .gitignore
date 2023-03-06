@@ -11,3 +11,5 @@
 /build
 /captures
 .externalNativeBuild
+/AudioPresenter-release/build/.transforms
+/Visualiser-release/build/.transforms

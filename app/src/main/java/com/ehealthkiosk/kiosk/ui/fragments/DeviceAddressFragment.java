@@ -98,7 +98,7 @@ public class DeviceAddressFragment extends Fragment implements SettingsView {
     @BindView(R.id.container_layout)
     LinearLayout containerLayout;
     @BindView(R.id.access_denied_container)
-    RelativeLayout accessDeniedContainer;
+    LinearLayout accessDeniedContainer;
     @BindView(R.id.retry_password)
     MaterialButton retryPassword;
     @BindView(R.id.sync_button)
@@ -426,60 +426,63 @@ public class DeviceAddressFragment extends Fragment implements SettingsView {
 
 
     private void connectToDevice() {
+        try {
 
-        String deviceAddress = DeviceIdPrefHelper.getDeviceAddress(mActivity, Constants.HEIGHT);
-        device = Neatle.getDevice(deviceAddress);
+            String deviceAddress = DeviceIdPrefHelper.getDeviceAddress(mActivity, Constants.HEIGHT);
+            device = Neatle.getDevice(deviceAddress);
 
-        monitor = Neatle.createConnectionMonitor(mActivity, device);
-        monitor.setKeepAlive(true);
+            monitor = Neatle.createConnectionMonitor(mActivity, device);
+            monitor.setKeepAlive(true);
 
-        monitor.setOnConnectionStateListener(new ConnectionStateListener() {
-            @Override
-            public void onConnectionStateChanged(Connection connection, int newState) {
-                Log.d("TAG", "New State " + newState );
-                if(connection.isConnected()){
-                    mConnection = connection;
-                    Log.d("TAG", "device is connected now");
-                    measureHeight.setEnabled(true);
-                    is_connected = true;
-                    if(subscription != null){
-                        subscription.stop();
-                    }
-
-                    UUID batteryService = Neatle.createUUID(0xFFE0);
-                    UUID characteristicUUID = UUID.fromString("0000FFE1-0000-1000-8000-00805F9B34FB");
-                    subscription =
-                            Neatle.createSubscription(mActivity, device, batteryService, characteristicUUID);
-                    subscription.setOnCharacteristicsChangedListener(new CharacteristicsChangedListener() {
-                        @Override
-                        public void onCharacteristicChanged(CommandResult change) {
-                            if (change.wasSuccessful()) {
-                                Log.d("TAG", "got a notification");
-                                parseReading(change);
-                            }
+            monitor.setOnConnectionStateListener(new ConnectionStateListener() {
+                @Override
+                public void onConnectionStateChanged(Connection connection, int newState) {
+                    Log.d("TAG", "New State " + newState);
+                    if (connection.isConnected()) {
+                        mConnection = connection;
+                        Log.d("TAG", "device is connected now");
+                        measureHeight.setEnabled(true);
+                        is_connected = true;
+                        if (subscription != null) {
+                            subscription.stop();
                         }
-                    });
-                    subscription.start();
-                    Log.d("TAG", "subscription is now started");
-                    sendCommand("O");
 
-                    // The device has connected
+                        UUID batteryService = Neatle.createUUID(0xFFE0);
+                        UUID characteristicUUID = UUID.fromString("0000FFE1-0000-1000-8000-00805F9B34FB");
+                        subscription =
+                                Neatle.createSubscription(mActivity, device, batteryService, characteristicUUID);
+                        subscription.setOnCharacteristicsChangedListener(new CharacteristicsChangedListener() {
+                            @Override
+                            public void onCharacteristicChanged(CommandResult change) {
+                                if (change.wasSuccessful()) {
+                                    Log.d("TAG", "got a notification");
+                                    parseReading(change);
+                                }
+                            }
+                        });
+                        subscription.start();
+                        Log.d("TAG", "subscription is now started");
+                        sendCommand("O");
+
+                        // The device has connected
+                    } else if (connection.isConnecting()) {
+
+                        is_connected = false;
+
+                        Log.d("TAG", "trying to connect now");
+                        measureHeight.setEnabled(false);
+                    } else {
+
+                        is_connected = false;
+                        Log.d("TAG", "device disconnected");
+                        measureHeight.setEnabled(false);
+                    }
                 }
-                else if(connection.isConnecting()){
-
-                    is_connected = false;
-
-                    Log.d("TAG", "trying to connect now");
-                    measureHeight.setEnabled(false);
-                }else {
-
-                    is_connected = false;
-                    Log.d("TAG", "device disconnected");
-                    measureHeight.setEnabled(false);
-                }
-            }
-        });
-        monitor.start();
+            });
+            monitor.start();
+        }catch (Exception ex){
+            Toast.makeText(getActivity(), ex.getMessage().toString(), Toast.LENGTH_LONG).show();
+        }
     }
 
 

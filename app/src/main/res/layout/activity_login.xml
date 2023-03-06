@@ -3,12 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorPrimary">
+    android:layout_height="match_parent">
 
     <include
         android:id="@+id/top_bar"
-        layout="@layout/top_toolbar" />
+        layout="@layout/top_toolbar"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -18,26 +17,16 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
             android:layout_marginTop="75dp">
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="600dp"
-                android:layout_height="280dp"
-                android:layout_centerInParent="true">
-
-                <View android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:background="@color/colorAccent"/>
 
 
                 <TextView
                     android:id="@+id/tv_login"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="40dp"
-                    android:layout_gravity="center_horizontal"
-                    android:text="LOGIN"
+                    android:gravity="center_horizontal"
+                    android:text="@string/login_caps"
                     android:textStyle="bold"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
@@ -62,17 +51,16 @@
                             app:ccp_textSize="14sp"
                             android:padding="10dp"
                             android:background="@drawable/edittext_border"
-                            android:layout_marginRight="10dp"
+                            android:layout_marginEnd="10dp"
                             android:layout_weight="3"/>
 
                         <EditText
                             android:id="@+id/et_login_number"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_centerHorizontal="true"
                             android:layout_weight="1"
                             android:padding="10dp"
-                            android:hint="Phone number"
+                            android:hint="@string/phone_number"
                             android:inputType="phone"
                             android:background="@drawable/edittext_border"
                             android:maxLength="10"
@@ -86,10 +74,9 @@
                         app:rippleColor="@color/black_semi_transparent"
                         android:layout_height="60dp"
                         android:layout_marginTop="30dp"
-                        android:text="LOGIN"
+                        android:text="@string/login_caps"
                         android:textSize="20sp" />
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
         </RelativeLayout>
     </ScrollView>

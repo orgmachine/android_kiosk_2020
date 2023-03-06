@@ -18,166 +18,137 @@
         <LinearLayout
             android:id="@+id/kiosk_container_layout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_margin="30dp"
             android:orientation="vertical">
 
-            <RelativeLayout
+            <LinearLayout
                 android:id="@+id/app_version_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="5dp"
-                android:layout_weight="2"
+                android:layout_margin="10dp"
                 android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/app_version_text"
-                    android:layout_width="wrap_content"
+                    android:layout_width="800dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_weight="1.4"
-                    android:text="App Version"
+                    android:text="@string/app_version"
                     android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/app_version_value"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="240dp"
-                    android:layout_weight="0.9"
-                    android:text="1"
+                    android:gravity="start"
+                    android:text="@string/one"
                     android:textSize="24sp" />
 
-            </RelativeLayout>
+            </LinearLayout>
 
-            <RelativeLayout
+            <LinearLayout
                 android:id="@+id/check_internet_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginRight="10dp">
+                android:orientation="horizontal"
+                android:layout_margin="10dp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:id="@+id/check_internet_text"
+                    android:layout_width="800dp"
                     android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginBottom="5dp"
-                    android:text="Internet Availability: "
+                    android:text="@string/internet_availability"
                     android:textSize="24sp" />
 
                 <ToggleButton
                     android:id="@+id/wifi_toggle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="220dp"
+                    android:gravity="start"
                     android:textColorHighlight="@color/colorPrimary" />
-            </RelativeLayout>
+            </LinearLayout>
 
 
-            <RelativeLayout
+            <LinearLayout
                 android:id="@+id/server_check_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginRight="10dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_margin="10dp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:id="@+id/server_check_text"
+                    android:layout_width="800dp"
                     android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginBottom="5dp"
-                    android:text="Server Availaibility: "
+                    android:text="@string/server_availaibility"
                     android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/text_server_check"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
                     android:layout_gravity="center"
-                    android:layout_marginRight="220dp"
                     android:textSize="20sp" />
-            </RelativeLayout>
+            </LinearLayout>
 
-            <RelativeLayout
+            <LinearLayout
                 android:id="@+id/bluetooth_check_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginRight="10dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_margin="10dp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:id="@+id/bluetooth_toggle_text"
+                    android:layout_width="800dp"
                     android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginBottom="5dp"
-                    android:text="Bluetooth Availaibility: "
+                    android:text="@string/bluetooth_availaibility"
                     android:textSize="24sp" />
 
                 <ToggleButton
                     android:id="@+id/bluetooth_toggle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="220dp"
                     android:textColorHighlight="@color/colorPrimary" />
-            </RelativeLayout>
+            </LinearLayout>
 
 
-            <RelativeLayout
+            <LinearLayout
                 android:id="@+id/device_config_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginRight="10dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_margin="10dp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:id="@+id/text_config_check_text"
+                    android:layout_width="800dp"
                     android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginBottom="5dp"
-                    android:text="Device Config Status: "
+                    android:text="@string/device_config_status"
                     android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/text_config_check"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_gravity="center"
-                    android:layout_marginRight="220dp"
                     android:textSize="20sp"
                     app:rippleColor="@color/black_semi_transparent" />
-            </RelativeLayout>
+            </LinearLayout>
 
 
-            <RelativeLayout
+            <LinearLayout
                 android:id="@+id/printer_check_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginRight="10dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_margin="10dp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:id="@+id/btn_printer_text"
+                    android:layout_width="800dp"
                     android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginBottom="5dp"
-                    android:text="Printer Availaibility: "
+                    android:text="@string/printer_availaibility"
                     android:textSize="24sp" />
 
                 <com.google.android.material.button.MaterialButton
@@ -185,14 +156,11 @@
                     style="@style/Widget.MaterialComponents.Button"
                     android:layout_width="wrap_content"
                     android:layout_height="60dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_gravity="center"
-                    android:layout_marginRight="80dp"
-                    android:backgroundTint="@color/icon_disabled"
-                    android:text="Check Printer Status"
-                    android:textSize="20sp"
-                    app:rippleColor="@color/black_semi_transparent" />
-            </RelativeLayout>
+                    android:backgroundTint="@color/colorPrimary"
+                    android:text="@string/check_printer_status"
+                    android:textSize="18sp"
+                    app:rippleColor="@color/colorPrimary" />
+            </LinearLayout>
 
         </LinearLayout>
 

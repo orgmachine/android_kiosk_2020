@@ -62,7 +62,7 @@
             android:name=".ui.activities.AudioPlayerActivity"
             android:screenOrientation="landscape"
 
-            android:label="@string/title_activity_audio_player"></activity>
+            android:label="@string/title_activity_audio_player"/>
         <activity
             android:name=".ui.activities.ECGTestActivity"
             android:label="@string/title_activity_e_c_g_test" />
@@ -111,7 +111,7 @@
             android:name=".ui.activities.WelcomeActivity"
             android:launchMode="singleTop"
             android:screenOrientation="landscape"
-            android:windowSoftInputMode="stateHidden|adjustResize" />
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".ui.activities.login.LoginActivity"
             android:screenOrientation="landscape"
@@ -175,7 +175,7 @@
             android:label=""
             android:parentActivityName=".ui.activities.selectprofile.SelectProfileActivity"
             android:screenOrientation="landscape"
-            android:windowSoftInputMode="adjustPan">
+            android:configChanges="orientation|screenSize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.ehealthkiosk.kiosk.ui.activities.selectprofile.SelectProfileActivity" />
@@ -192,8 +192,7 @@
             android:name=".ui.activities.SettingsTabActivity"
             android:label=""
             android:parentActivityName=".ui.activities.selectprofile.SelectProfileActivity"
-            android:screenOrientation="landscape"
-            android:windowSoftInputMode="adjustPan">
+            android:screenOrientation="landscape">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.ehealthkiosk.kiosk.ui.activities.selectprofile.SelectProfileActivity" />

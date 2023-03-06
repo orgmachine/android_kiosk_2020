@@ -11,6 +11,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -36,11 +38,11 @@ public class WelcomeActivity extends BaseActivity {
 
     ComponentName myServiceComponent;
 
-    @BindView(R.id.top_bar)
-    Toolbar toolbar;
+//    @BindView(R.id.top_bar)
+//    Toolbar toolbar;
 
     @BindView(R.id.attendant_app)
-    MaterialButton attendatApp;
+    TextView attendatApp;
 
 
     @Override
@@ -48,13 +50,14 @@ public class WelcomeActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
         ButterKnife.bind(this);
-        if (toolbar != null) {
-            setSupportActionBar(toolbar);
-        }
+//        if (toolbar != null) {
+//            setSupportActionBar(toolbar);
+//        }
 
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-        showSystemUI();
+//        getSupportActionBar().setDisplayShowTitleEnabled(false);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+//        showSystemUI();
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         askLocationPermission();
 
@@ -79,9 +82,9 @@ public class WelcomeActivity extends BaseActivity {
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
-        if (hasFocus) {
-            hideSystemUI();
-        }
+//        if (hasFocus) {
+//            hideSystemUI();
+//        }
     }
 
     private void hideSystemUI() {
