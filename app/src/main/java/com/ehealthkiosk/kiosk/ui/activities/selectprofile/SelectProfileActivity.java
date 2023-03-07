@@ -170,7 +170,7 @@ public class SelectProfileActivity extends BaseActivity implements OnItemClickLi
 
     private void logoutAlert(){
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(this,R.style.MyAlertDialogStyle);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
         //Uncomment the below code to Set the message and title from the strings.xml file
         builder.setMessage("Do you want to logout").setTitle("Logout")

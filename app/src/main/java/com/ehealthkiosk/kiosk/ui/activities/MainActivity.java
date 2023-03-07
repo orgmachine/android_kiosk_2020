@@ -262,7 +262,7 @@ public class MainActivity extends BaseActivity {
     }
 
     void backPressClick() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.MyAlertDialogStyle);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
         builder.setTitle(null);
         builder.setMessage(getResources().getString(R.string.exit_text_text));

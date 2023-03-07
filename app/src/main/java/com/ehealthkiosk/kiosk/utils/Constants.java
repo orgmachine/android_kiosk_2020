@@ -161,6 +161,8 @@ public class Constants {
     public static final String QB_LOGIN = "qb_login";
     public static final String QB_PASSWORD = "qb_password";
 
+    public static final String LOGIN_PASSWORD_SAVED = "login_password_saved";
+
     public static final String APP_ID = "80293";
     public static final String AUTH_KEY = "tPWasabEppO8jpT";
     public static final String AUTH_SECRET = "xVHuJFqghs3ESsB";

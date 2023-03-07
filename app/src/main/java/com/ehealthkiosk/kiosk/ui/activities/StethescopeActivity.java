@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -83,6 +84,8 @@ public class StethescopeActivity extends AppCompatActivity implements AudioRecor
         toolbar = findViewById(R.id.top_bar);
         toolbarTitle = findViewById(R.id.toolbar_title);
         toolbarTitle.setText("Stethoscope Test");
+
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setSupportActionBar(toolbar);
 

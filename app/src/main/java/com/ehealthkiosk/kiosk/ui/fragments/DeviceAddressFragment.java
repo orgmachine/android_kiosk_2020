@@ -18,7 +18,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
-import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -312,7 +311,7 @@ public class DeviceAddressFragment extends Fragment implements SettingsView {
         retryPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openPassworDialog();
+                opnPasswordDialog();
             }
         });
         return view;
@@ -329,7 +328,7 @@ public class DeviceAddressFragment extends Fragment implements SettingsView {
         mActivity = (Activity) context;
     }
 
-    void openPassworDialog() {
+    void opnPasswordDialog() {
         //before inflating the custom alert dialog layout, we will get the current activity viewgroup
         ViewGroup viewGroup = mActivity.findViewById(android.R.id.content);
 
@@ -377,6 +376,7 @@ public class DeviceAddressFragment extends Fragment implements SettingsView {
                     setup();
                     containerLayout.setVisibility(View.VISIBLE);
                     accessDeniedContainer.setVisibility(View.GONE);
+                    DeviceIdPrefHelper.saveLogin(getActivity(), true);
                     show_saved_settings();
                     alertDialog.dismiss();
                 } else {
@@ -391,9 +391,16 @@ public class DeviceAddressFragment extends Fragment implements SettingsView {
         super.setUserVisibleHint(isVisibleToUser);
         if (isVisibleToUser) {
             containerLayout.setVisibility(View.GONE);
-            openPassworDialog();
-            connectToDevice();
-            show_saved_settings();
+            if(DeviceIdPrefHelper.isLoginSaved(getActivity())) {
+                setup();
+                containerLayout.setVisibility(View.VISIBLE);
+                accessDeniedContainer.setVisibility(View.GONE);
+                show_saved_settings();
+            }else {
+                opnPasswordDialog();
+                connectToDevice();
+                show_saved_settings();
+            }
         }
     }
 

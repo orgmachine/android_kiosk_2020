@@ -47,6 +47,19 @@ public class DeviceIdPrefHelper {
         editor.commit();
     }
 
+    public static boolean isLoginSaved(Context ctx) {
+        SharedPreferences prefs = ctx.getSharedPreferences(Constants.DEVICE_PREF, MODE_PRIVATE);
+        return prefs.getBoolean(Constants.LOGIN_PASSWORD_SAVED, false);
+    }
+
+
+    public static void saveLogin(Context ctx, Boolean isChecked) {
+        SharedPreferences prefs = ctx.getSharedPreferences(Constants.DEVICE_PREF, MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putBoolean(Constants.LOGIN_PASSWORD_SAVED, isChecked);
+        editor.commit();
+    }
+
 
     public static boolean getRaspberryPi(Context ctx, Boolean isChecked) {
         SharedPreferences prefs = ctx.getSharedPreferences(Constants.DEVICE_PREF, MODE_PRIVATE);

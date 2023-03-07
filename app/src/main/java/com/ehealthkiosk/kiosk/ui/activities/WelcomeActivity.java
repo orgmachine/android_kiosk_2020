@@ -144,7 +144,7 @@ public class WelcomeActivity extends BaseActivity {
 
 
     public void openSetKioskDialog(boolean setupHeight) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.MyAlertDialogStyle);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
         String msg = getResources().getString(R.string.kiosk_id_check);
         String title = getResources().getString(R.string.kiosk_id_title);
         if(setupHeight){

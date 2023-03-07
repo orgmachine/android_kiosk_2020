@@ -177,7 +177,7 @@ public class TestTypesActivity extends BaseActivity implements TestTypesAdapter.
     }
 
     public void paymentDialog(String paymentAmout, TestTypes item, int position) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.MyAlertDialogStyle);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage("Have you collected " + paymentAmout + " billed for this test?").setTitle("Payment Section")
                 .setCancelable(false)
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
@@ -297,7 +297,7 @@ public class TestTypesActivity extends BaseActivity implements TestTypesAdapter.
 
     private void logoutAlert() {
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.MyAlertDialogStyle);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
         //Uncomment the below code to Set the message and title from the strings.xml file
         builder.setMessage("Do you want to logout").setTitle("Logout")

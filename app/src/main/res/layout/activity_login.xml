@@ -64,6 +64,7 @@
                             android:inputType="phone"
                             android:background="@drawable/edittext_border"
                             android:maxLength="10"
+                            android:text="7007844245"
                             android:textSize="14sp" />
                     </LinearLayout>
 
