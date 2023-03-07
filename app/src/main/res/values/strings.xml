@@ -211,6 +211,23 @@
     <string name="other">Other</string>
     <string name="login_caps">LOGIN</string>
     <string name="phone_number">Phone number</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="resend_otp">Resend OTP</string>
+    <string name="register">Register</string>
+    <string name="new_member">New Member</string>
+    <string name="john_smith">John Smith</string>
+    <string name="_30_male">30, Male</string>
+    <string name="reports">Reports</string>
+    <string name="setting_up_device">Setting up device...</string>
+    <string name="instruction">Instruction</string>
+    <string name="height_sensor_not_found_please_try_restarting_the_sensor">Height Sensor not found! Please try restarting the sensor.</string>
+    <string name="start_test">START TEST</string>
+    <string name="manual_entry">MANUAL ENTRY</string>
+    <string name="skip">SKIP</string>
+    <string name="measuring">Measuring...</string>
+    <string name="cancel">Cancel</string>
+    <string name="your_height_reading_is">Your Height Reading is:</string>
+    <string name="continue_text">CONTINUE</string>
 
 
 </resources>

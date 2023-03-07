@@ -282,7 +282,7 @@
     <color name="colorPrimary">#009cd5</color>
     <color name="colorPrimaryLight">#373737</color>
     <color name="colorPrimaryDark">#0483B1</color>
-    <color name="colorAccent">#0ac680</color>
+    <color name="colorAccent">#009cd5</color>
     <color name="rippleColor">#C0C0C0</color>
     <color name="colorSecondary">#87c74f</color>
 

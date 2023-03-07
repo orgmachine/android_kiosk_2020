@@ -38,7 +38,7 @@
                 android:textSize="24sp"
                 android:layout_marginTop="5dp"
                 android:padding="10dp"
-                android:text="John Smith"/>
+                android:text="@string/john_smith"/>
 
             <TextView
                 android:id="@+id/tv_age_gender"
@@ -49,7 +49,7 @@
                 android:textSize="18sp"
                 android:padding="5dp"
                 android:layout_marginBottom="10dp"
-                android:text="30, Male"/>
+                android:text="@string/_30_male"/>
 
         </LinearLayout>
 

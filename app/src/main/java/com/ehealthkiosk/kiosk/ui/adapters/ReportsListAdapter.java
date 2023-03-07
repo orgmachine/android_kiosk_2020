@@ -98,7 +98,7 @@ public class ReportsListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
                     ((ViewHolder) viewHolder).image.setImageDrawable(context.getDrawable(R.drawable.heart));
                     break;
                 case "OTOSCOPE":
-                    ((ViewHolder) viewHolder).image.setImageDrawable(context.getDrawable(R.drawable.otoscope));
+                    ((ViewHolder) viewHolder).image.setImageDrawable(context.getDrawable(R.drawable.otoscope_icon));
                     break;
                 case "DERMASCOPE":
                     ((ViewHolder) viewHolder).image.setImageDrawable(context.getDrawable(R.drawable.dermo));

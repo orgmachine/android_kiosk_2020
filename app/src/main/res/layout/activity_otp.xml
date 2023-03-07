@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
     android:orientation="vertical">
 
     <include
@@ -12,8 +11,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/colorPrimary">
+        android:layout_height="match_parent">
 
         <androidx.cardview.widget.CardView
             android:layout_width="600dp"
@@ -33,13 +31,19 @@
                 android:orientation="vertical"
                 android:padding="20dp">
 
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/otp_icon" />
+
                 <TextView
                     android:id="@+id/tv_otp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Enter OTP"
+                    android:text="@string/enter_otp"
                     android:textColor="@color/black"
+                    android:layout_marginTop="20dp"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     android:layout_marginBottom="10dp" />
@@ -77,7 +81,8 @@
                     app:rippleColor="@color/black_semi_transparent"
                     android:textSize="20sp"
                     android:padding="10dp"
-                    android:text="SUBMIT"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/submit"
                     android:textColor="@android:color/white"
                     android:textStyle="bold" />
 
@@ -88,7 +93,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginEnd="8dp"
-                    android:text="Resend OTP"
+                    android:text="@string/resend_otp"
                     android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.498"

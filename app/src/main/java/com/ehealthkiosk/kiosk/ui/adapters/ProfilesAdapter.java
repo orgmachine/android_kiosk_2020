@@ -73,7 +73,7 @@ public class ProfilesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
                 ProfilesItem userItem = mProfilesList.get(position);
                 holder.tvName.setText(userItem.getName());
                 String profileImage = userItem.getPhotoUrl();
-                Drawable drawable = ContextCompat.getDrawable(HealthKioskApp.context, R.drawable.user_profile);
+                Drawable drawable = ContextCompat.getDrawable(HealthKioskApp.context, R.drawable.male_large);
                 Common_Utils.getCircularImageFromServer(holder.imgProfile, profileImage, drawable);
 
                 holder.tvAgeGender.setText(userItem.getAge() +", "+ Common_Utils.toCamelCase(userItem.getGender()));

@@ -14,7 +14,6 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -23,7 +22,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.ehealthkiosk.kiosk.HealthKioskApp;
 import com.ehealthkiosk.kiosk.R;
 import com.ehealthkiosk.kiosk.model.TestTypes;
-import com.ehealthkiosk.kiosk.storage.SQLStorageHelper;
 import com.ehealthkiosk.kiosk.ui.activities.consult.ConsultationsActivity;
 import com.ehealthkiosk.kiosk.ui.activities.reportlist.ReportsListActivity;
 import com.ehealthkiosk.kiosk.ui.activities.selectprofile.SelectProfileActivity;
@@ -78,12 +76,12 @@ public class TestTypesActivity extends BaseActivity implements TestTypesAdapter.
         }
 
         arrayList = new ArrayList();
-        arrayList.add(new TestTypes(Constants.TEST_TYPE_BASIC, "Basic Test", R.drawable.basic, "#20ca8b"));
-        arrayList.add(new TestTypes(Constants.TEST_TYPE_WELLNESS, "Wellness Test", R.drawable.heart, "#ff7b7b"));
-        arrayList.add(new TestTypes(Constants.CONSULT_DOCTOR, "Consult Doctor", R.drawable.doctor, "#ff7b7b"));
-        arrayList.add(new TestTypes(Constants.TEST_TYPE_DERMA, "Dermascope", R.drawable.dermo, "#ff7b7b"));
-        arrayList.add(new TestTypes(Constants.TEST_TYPE_AUTOSCOPE, "Otoscope", R.drawable.otoscope, "#ff7b7b"));
-        arrayList.add(new TestTypes(Constants.TEST_TYPE_STETHESCOPE, "Stethoscope", R.drawable.stethoscope, "#ff7b7b"));
+        arrayList.add(new TestTypes(Constants.TEST_TYPE_BASIC, "Basic Test", R.drawable.basic_test, "#20ca8b"));
+        arrayList.add(new TestTypes(Constants.TEST_TYPE_WELLNESS, "Wellness Test", R.drawable.wellness_test, "#ff7b7b"));
+        arrayList.add(new TestTypes(Constants.CONSULT_DOCTOR, "Consult Doctor", R.drawable.consult_doctor, "#ff7b7b"));
+        arrayList.add(new TestTypes(Constants.TEST_TYPE_DERMA, "Dermascope", R.drawable.dermascope, "#ff7b7b"));
+        arrayList.add(new TestTypes(Constants.TEST_TYPE_AUTOSCOPE, "Otoscope", R.drawable.otoscope_1, "#ff7b7b"));
+        arrayList.add(new TestTypes(Constants.TEST_TYPE_STETHESCOPE, "Stethoscope", R.drawable.stethoscope_1, "#ff7b7b"));
 
         arrayList.add(new TestTypes(Constants.TEST_TYPE_ECG, "ECG Test", R.drawable.heart, "#ff7b7b"));
 
