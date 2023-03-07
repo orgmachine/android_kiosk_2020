@@ -19,7 +19,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Enter Your Blood Pressure"
+            android:text="@string/enter_your_blood_pressure"
             android:textColor="@color/textColorLightPrimary"
             android:textAlignment="center"
             android:layout_gravity="center_horizontal"

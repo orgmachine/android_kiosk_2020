@@ -228,6 +228,27 @@
     <string name="cancel">Cancel</string>
     <string name="your_height_reading_is">Your Height Reading is:</string>
     <string name="continue_text">CONTINUE</string>
+    <string name="instructions">Instructions</string>
+    <string name="selectprofile">SelectProfile</string>
+    <string name="settings">Settings</string>
+    <string name="home">Home</string>
+    <string name="yolohealth">YoloHealth</string>
+    <string name="consult_doctor">Consult Doctor</string>
+    <string name="enter_your_details">Enter your details</string>
+    <string name="pulse">Pulse</string>
+    <string name="temperature">Temperature</string>
+    <string name="blood_pressure">Blood Pressure</string>
+    <string name="weight_machine">Weight Machine</string>
+    <string name="height_machine">Height Machine</string>
+    <string name="glucose">Glucose</string>
+    <string name="print_url">Print Url</string>
+    <string name="check_one_for_printer_settings">Check One For Printer Settings</string>
+    <string name="device_address">Device Address</string>
+    <string name="read_data">READ DATA</string>
+    <string name="generate_report">GENERATE REPORT</string>
+    <string name="_98_3_f">98.3 F</string>
+    <string name="your_temperature_reading_is">Your Temperature Reading is:</string>
+    <string name="enter_your_blood_pressure">Enter Your Blood Pressure</string>
 
 
 </resources>

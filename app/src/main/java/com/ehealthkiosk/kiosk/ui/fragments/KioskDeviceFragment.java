@@ -50,6 +50,7 @@ public class KioskDeviceFragment extends Fragment implements SettingsView {
 
         //then we will inflate the custom alert dialog xml that we created
         View dialogView = LayoutInflater.from(getActivity()).inflate(R.layout.dialog_settings_password, viewGroup, false);
+        Button btnCancel = dialogView.findViewById(R.id.btn_cancel);
         Button btnEnter = dialogView.findViewById(R.id.btn_enter);
         ImageView cancelDialog = dialogView.findViewById(R.id.dialog_cancel);
         EditText adminpassword = dialogView.findViewById(R.id.et_password);
@@ -75,6 +76,12 @@ public class KioskDeviceFragment extends Fragment implements SettingsView {
             }
         });
 
+        btnCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                alertDialog.dismiss();
+            }
+        });
         btnEnter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -133,14 +140,14 @@ public class KioskDeviceFragment extends Fragment implements SettingsView {
             issuedBy.setText(DeviceIdPrefHelper.getIssuedBy(getActivity(), Constants.ISSUED_BY));
             expiryDate.setText(DeviceIdPrefHelper.getExpiry(getActivity(), Constants.EXPIRY_DATE));
             Constants.KIOSK_ID_PRESENT = false;
-            saveIdButton.setVisibility(View.INVISIBLE);
+            saveIdButton.setVisibility(View.GONE);
             logoutButton.setVisibility(View.VISIBLE);
 
         } else {
             kioskIdInput.setEnabled(true);
             kioskIdInput.setText("");
             saveIdButton.setVisibility(View.VISIBLE);
-            logoutButton.setVisibility(View.INVISIBLE);
+            logoutButton.setVisibility(View.GONE);
 
         }
 

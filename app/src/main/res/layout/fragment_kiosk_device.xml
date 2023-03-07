@@ -16,21 +16,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp">
 
         <LinearLayout
             android:id="@+id/kiosk_container_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="30dp"
-            android:orientation="vertical">
+            android:gravity="center"
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:id="@+id/kiosk_id_container"
-                android:layout_width="match_parent"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
-                android:layout_marginBottom="5dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -47,13 +52,13 @@
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:imeOptions="actionNext">
+                    android:layout_margin="10dp">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/kiosk_id_inp_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:singleLine="true"
                         android:textColor="@color/colorPrimary" />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -62,7 +67,7 @@
 
             <LinearLayout
                 android:id="@+id/issued_by_container"
-                android:layout_width="match_parent"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
@@ -89,10 +94,9 @@
 
             <LinearLayout
                 android:id="@+id/expiry_date_container"
-                android:layout_width="match_parent"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
-                android:layout_marginTop="15dp"
                 android:layout_marginRight="30dp"
                 android:orientation="vertical">
 
@@ -115,18 +119,19 @@
             </LinearLayout>
 
 
+        </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:paddingLeft="40dp"
                 android:paddingRight="40dp"
-                android:layout_marginTop="20dp"
                 android:orientation="vertical"
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btn_login"
                     style="@style/Widget.MaterialComponents.Button"
-                    android:layout_width="match_parent"
+                    android:layout_width="300dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:backgroundTint="@color/colorPrimary"
@@ -136,7 +141,7 @@
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btn_logout"
                     style="@style/Widget.MaterialComponents.Button"
-                    android:layout_width="match_parent"
+                    android:layout_width="300dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:layout_marginStart="10dp"
@@ -148,7 +153,6 @@
             </LinearLayout>
 
         </LinearLayout>
-
 
     </ScrollView>
 </RelativeLayout>

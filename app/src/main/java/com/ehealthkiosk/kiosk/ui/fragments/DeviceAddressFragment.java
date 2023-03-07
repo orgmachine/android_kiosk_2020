@@ -335,6 +335,7 @@ public class DeviceAddressFragment extends Fragment implements SettingsView {
 
         //then we will inflate the custom alert dialog xml that we created
         View dialogView = LayoutInflater.from(getActivity()).inflate(R.layout.dialog_settings_password, viewGroup, false);
+        Button btnCancel = dialogView.findViewById(R.id.btn_cancel);
         Button btnEnter = dialogView.findViewById(R.id.btn_enter);
         ImageView cancelDialog = dialogView.findViewById(R.id.dialog_cancel);
         EditText adminpassword = dialogView.findViewById(R.id.et_password);
@@ -356,6 +357,14 @@ public class DeviceAddressFragment extends Fragment implements SettingsView {
         cancelDialog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                alertDialog.dismiss();
+                accessDeniedContainer.setVisibility(View.VISIBLE);
+            }
+        });
+
+        btnCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
                 alertDialog.dismiss();
                 accessDeniedContainer.setVisibility(View.VISIBLE);
             }

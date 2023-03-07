@@ -192,7 +192,9 @@
             android:name=".ui.activities.SettingsTabActivity"
             android:label=""
             android:parentActivityName=".ui.activities.selectprofile.SelectProfileActivity"
-            android:screenOrientation="landscape">
+            android:screenOrientation="landscape"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize|stateHidden">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.ehealthkiosk.kiosk.ui.activities.selectprofile.SelectProfileActivity" />

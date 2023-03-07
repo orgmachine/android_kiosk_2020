@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -55,6 +56,7 @@ public class TestTypesActivity extends BaseActivity implements TestTypesAdapter.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_types);
         ButterKnife.bind(this);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         SharedPrefUtils.clearSP(this);
 

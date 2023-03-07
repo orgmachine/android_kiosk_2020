@@ -34,7 +34,7 @@
                 android:layout_height="match_parent">
                 <TextView
                     android:layout_width="match_parent"
-                    android:text="Instructions"
+                    android:text="@string/instructions"
                     android:textSize="24sp"
                     android:padding="5dp"
                     android:textColor="@color/colorPrimary"

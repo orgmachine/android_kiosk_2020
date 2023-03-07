@@ -4,25 +4,25 @@
 
     <item
         android:id="@+id/action_profile"
-        android:icon="@drawable/ic_profiles"
-        android:title="SelectProfile"
-        app:showAsAction="always"/>
+        android:icon="@drawable/users"
+        android:title="@string/selectprofile"
+        app:showAsAction="ifRoom"/>
 
     <item
         android:id="@+id/action_settings"
         android:icon="@drawable/settings"
-        android:title="Settings"
-        app:showAsAction="always"/>
+        android:title="@string/settings"
+        app:showAsAction="ifRoom"/>
 
     <item
         android:id="@+id/action_home"
-        android:icon="@drawable/ic_home"
-        android:title="Home"
+        android:icon="@drawable/home"
+        android:title="@string/home"
         app:showAsAction="always"/>
 
     <item
         android:id="@+id/action_logout"
         android:icon="@drawable/ic_logout_icon"
-        android:title="Logout"
+        android:title="@string/logout"
         app:showAsAction="always"/>
 </menu>

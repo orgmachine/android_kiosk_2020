@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -72,6 +73,7 @@ public class ReportsListActivity extends BaseActivity implements HealthReportsVi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_report_list);
         ButterKnife.bind(this);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         mp = new MediaPlayer();
         if (toolbar != null) {

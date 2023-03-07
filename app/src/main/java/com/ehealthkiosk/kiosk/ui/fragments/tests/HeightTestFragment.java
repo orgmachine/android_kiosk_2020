@@ -261,7 +261,6 @@ public class HeightTestFragment extends BaseDeviceFragment {
                     Log.d("TAG", "trying to connect now");
                     btnStart.setEnabled(false);
                 }else {
-
                     error.setVisibility(View.VISIBLE);
                     is_connected = false;
                     Log.d("TAG", "device disconnected");
