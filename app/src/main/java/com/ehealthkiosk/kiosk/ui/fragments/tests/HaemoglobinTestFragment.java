@@ -415,6 +415,7 @@ public class HaemoglobinTestFragment extends BaseDeviceFragment {
                 showReading(hbValue);
                 SharedPrefUtils.setHb(mActivity, String.valueOf(hbInp));
                 tvReading.setText(TWO_DECIMAL_PLACES.format(hbInp) + "  g/dL");
+                EventBus.getDefault().post(new MessageEvent(MessageEvent.EVENT_CHANGE_TEST, 6));
 
             }
         });

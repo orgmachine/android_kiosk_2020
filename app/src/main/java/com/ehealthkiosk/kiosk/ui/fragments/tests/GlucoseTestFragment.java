@@ -369,7 +369,7 @@ public class GlucoseTestFragment extends BaseDeviceFragment {
 
                 mActivity.setSourceMap(Constants.GLUECOSE, Constants.READING_MANUAL);
                 showReading(Double.parseDouble(glucoseValue));
-
+                EventBus.getDefault().post(new MessageEvent(MessageEvent.EVENT_CHANGE_TEST, 5));
             }
         });
     }

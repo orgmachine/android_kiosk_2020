@@ -400,8 +400,7 @@ public class HeightTestFragment extends BaseDeviceFragment {
                 alertDialog.dismiss();
                 mActivity.setSourceMap(Constants.HEIGHT, Constants.READING_MANUAL);
                 showReading(feet + " Feet " + inch + " inch");
-
-
+                EventBus.getDefault().post(new MessageEvent(MessageEvent.EVENT_CHANGE_TEST, 1));
             }
         });
 

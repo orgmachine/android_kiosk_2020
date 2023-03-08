@@ -12,6 +12,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -44,6 +45,9 @@ public class WelcomeActivity extends BaseActivity {
     @BindView(R.id.attendant_app)
     TextView attendatApp;
 
+    @BindView(R.id.id_settings)
+    ImageView settings;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -75,6 +79,14 @@ public class WelcomeActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 openApp(WelcomeActivity.this, "com.example.yolohealth_attendant_app");
+            }
+        });
+
+        settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(WelcomeActivity.this, SettingsTabActivity.class);
+                startActivity(i);
             }
         });
     }

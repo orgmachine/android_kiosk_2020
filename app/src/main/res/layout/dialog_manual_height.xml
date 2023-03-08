@@ -18,7 +18,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Enter Your Height"
+            android:text="@string/enter_your_height"
             android:textColor="@color/textColorLightPrimary"
             android:textAlignment="center"
             android:textSize="30sp"
@@ -49,7 +49,7 @@
             <TextView android:id="@+id/tv_feet"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="In Feet"
+                android:text="@string/in_feet"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:padding="10dp"/>
@@ -68,7 +68,7 @@
             <TextView android:id="@+id/tv_inches"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="In Inches"
+                android:text="@string/in_inches"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:padding="10dp"/>

@@ -287,30 +287,22 @@ public class BloodPressureTestFragment extends BaseDeviceFragment {
                     Toast.makeText(mContext, getResources().getString(R.string.enter_diast), Toast.LENGTH_SHORT).show();
                     return;
                 }
-
                 int diasys = Integer.parseInt(diasysET.getText().toString());
                 int sys = Integer.parseInt(sysET.getText().toString());
-
                 if (diasys <= 20 || diasys >= 200) {
                     Toast.makeText(mContext, getResources().getString(R.string.invalid_diast_toast), Toast.LENGTH_SHORT).show();
                     return;
                 }
-
                 if (sys <= 0 || sys >= 200) {
                     Toast.makeText(mContext, getResources().getString(R.string.invalid_syst_toast), Toast.LENGTH_SHORT).show();
                     return;
                 }
-
                 SharedPrefUtils.setSystolic(mActivity, sysET.getText().toString());
                 SharedPrefUtils.setDiastolic(mActivity, diasysET.getText().toString());
-
                 alertDialog.dismiss();
-
-
                 mActivity.setSourceMap(Constants.BP, Constants.READING_MANUAL);
                 showReading(sysET.getText().toString(), diasysET.getText().toString());
-
-
+                EventBus.getDefault().post(new MessageEvent(MessageEvent.EVENT_CHANGE_TEST, 3));
             }
         });
     }

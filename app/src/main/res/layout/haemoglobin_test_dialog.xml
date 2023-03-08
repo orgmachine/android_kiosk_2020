@@ -20,11 +20,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Enter Your Hemoglobin Value"
+            android:text="@string/enter_your_hemoglobin_value"
             android:textColor="@color/textColorLightPrimary"
             android:layout_marginTop="20dp"
             android:textAlignment="center"
-            android:imeOptions="actionDone"
             android:textSize="30sp"
             android:layout_gravity="center_horizontal"
             android:fontFamily="sans-serif-medium" />
@@ -82,12 +81,12 @@
             style="@style/Widget.MaterialComponents.Button"
             app:rippleColor="@color/black_semi_transparent"
             android:layout_gravity="center_horizontal"
-            android:text="SUBMIT"
+            android:text="@string/submit"
             android:textStyle="bold"
             android:textSize="20sp"
             android:layout_marginTop="50dp"
             android:layout_marginBottom="20dp"
-            android:backgroundTint="@color/colorAccent"
+            android:backgroundTint="@color/colorSecondary"
             android:textColor="@color/white"
             android:visibility="visible"
             android:shadowColor="@color/colorPrimaryLight" />

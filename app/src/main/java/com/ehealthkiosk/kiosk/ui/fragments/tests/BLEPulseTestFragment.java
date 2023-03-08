@@ -213,7 +213,7 @@ public class BLEPulseTestFragment extends BaseDeviceFragment implements ICallBac
                             try {
                                 progressBar.setProgress(nEntries);
                             }catch(Exception e){
-
+                                e.printStackTrace();
                             }
                         }
                         if(nEntries == 10){
@@ -322,12 +322,10 @@ public class BLEPulseTestFragment extends BaseDeviceFragment implements ICallBac
                 final String o2str = etsats.getText().toString();
                 SharedPrefUtils.setPulse(mActivity, pulseStr);
                 SharedPrefUtils.setSp02(mActivity, o2str);
-
-
                 alertDialog.dismiss();
-
                 mActivity.setSourceMap(Constants.PULSE, Constants.READING_MANUAL);
                 showReading(pulseStr, o2str);
+                EventBus.getDefault().post(new MessageEvent(MessageEvent.EVENT_CHANGE_TEST, 4));
 
 
 //                if (Common_Utils.isNotNullOrEmpty(Sp02Str)){

@@ -850,25 +850,17 @@ public class WeightTestFragment extends BaseDeviceFragment {
                     Toast.makeText(mContext, getResources().getString(R.string.enter_weight_toast), Toast.LENGTH_SHORT).show();
                     return;
                 }
-
                 double weight = Double.parseDouble(etWeight.getText().toString());
-
                 if (weight <= 0) {
                     Toast.makeText(mContext, getResources().getString(R.string.invalid_weight_toast), Toast.LENGTH_SHORT).show();
                     return;
                 }
-
-
                 final String weightStr = etWeight.getText().toString();
                 SharedPrefUtils.setWeight(mActivity, TWO_DECIMAL_PLACES.format(weight));
-
                 alertDialog.dismiss();
-
-
                 mActivity.setSourceMap(Constants.WEIGHT, Constants.READING_MANUAL);
                 showReading(TWO_DECIMAL_PLACES.format(weight) + " Kg");
-
-
+                EventBus.getDefault().post(new MessageEvent(MessageEvent.EVENT_CHANGE_TEST, 2));
             }
         });
     }

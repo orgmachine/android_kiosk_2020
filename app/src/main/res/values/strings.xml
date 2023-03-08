@@ -249,6 +249,13 @@
     <string name="_98_3_f">98.3 F</string>
     <string name="your_temperature_reading_is">Your Temperature Reading is:</string>
     <string name="enter_your_blood_pressure">Enter Your Blood Pressure</string>
+    <string name="enter_your_height">Enter Your Height</string>
+    <string name="in_feet">In Feet</string>
+    <string name="in_inches">In Inches</string>
+    <string name="enter_your_temperature">Enter Your Temperature</string>
+    <string name="enter_your_pulse_and_sp02_sats">Enter Your Pulse and Sp02 Sats</string>
+    <string name="in_mg_dl">In mg/dl</string>
+    <string name="enter_your_hemoglobin_value">Enter Your Hemoglobin Value</string>
 
 
 </resources>

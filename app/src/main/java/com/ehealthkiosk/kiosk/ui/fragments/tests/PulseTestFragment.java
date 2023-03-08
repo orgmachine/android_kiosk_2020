@@ -352,6 +352,7 @@ public class PulseTestFragment extends BaseDeviceFragment implements ICallBack {
 
                 mActivity.setSourceMap(Constants.PULSE, Constants.READING_MANUAL);
                 showReading(pulseStr, o2str);
+                EventBus.getDefault().post(new MessageEvent(MessageEvent.EVENT_CHANGE_TEST, 4));
 
 
 //                if (Common_Utils.isNotNullOrEmpty(Sp02Str)){
