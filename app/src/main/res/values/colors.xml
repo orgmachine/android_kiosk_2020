@@ -322,6 +322,8 @@
 
     <color name="icon_enabled">#0049EE</color>
     <color name="icon_disabled">#676767</color>
+    <color name="light_grey_2">#A8A5A5</color>
+
 
     <color name="transparent">#00000000</color>
     <color name="consult_button_red">#ff8383</color>

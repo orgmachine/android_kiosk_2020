@@ -66,6 +66,7 @@ public class DeviceAddressFragment extends Fragment implements SettingsView {
     private boolean is_connected = false;
     protected Activity mActivity;
 
+    public static final String SELECT = "Select";
     public static final String BP_CONTEC = "Contec";
     public static final String BP_BIOS = "Bios BP";
 
@@ -205,11 +206,14 @@ public class DeviceAddressFragment extends Fragment implements SettingsView {
         containerLayout.setVisibility(View.GONE);
 
         List<String> categories = new ArrayList<String>();
+        categories.add(SELECT);
         categories.add(BP_CONTEC);
         categories.add(BP_BIOS);
         List<String> pulseCategories = new ArrayList<String>();
+        pulseCategories.add(SELECT);
         pulseCategories.add(PULSE_CONTEC);
         pulseCategories.add(PULSE_BPL);
+        pulseSpinner.setSelection(0);
 
         // Creating adapter for spinner
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(mActivity, android.R.layout.simple_spinner_item, categories);

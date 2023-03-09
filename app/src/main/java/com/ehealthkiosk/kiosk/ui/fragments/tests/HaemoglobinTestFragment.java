@@ -326,7 +326,7 @@ public class HaemoglobinTestFragment extends BaseDeviceFragment {
                     }
                     final String reading = hb + " g/dL";
                     if(running)
-                    SharedPrefUtils.setHb(mActivity, String.valueOf(hb));
+                        SharedPrefUtils.setHb(mActivity, String.valueOf(hb));
 
                     if (getActivity() != null && running) {
                         getActivity().runOnUiThread(new Runnable() {

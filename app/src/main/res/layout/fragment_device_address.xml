@@ -15,13 +15,14 @@
             android:id="@+id/container_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
+            android:layout_marginTop="20dp"
             android:orientation="vertical"
             android:visibility="visible">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
                 android:orientation="horizontal">
 
             <LinearLayout
@@ -54,7 +55,10 @@
                         android:layout_width="wrap_content"
                         android:id="@+id/pulse_spinner"
                         android:layout_weight="1"
-                        android:layout_height="wrap_content"/>
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/spinner_bg"
+                        android:layout_height="55dp"/>
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/device_one_inp_layout"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -123,6 +127,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:orientation="horizontal">
 
             <LinearLayout
@@ -156,14 +161,17 @@
                         android:layout_width="wrap_content"
                         android:id="@+id/bp_spinner"
                         android:layout_weight="1"
-                        android:layout_height="wrap_content"/>
+                        android:background="@drawable/spinner_bg"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_height="55dp"/>
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/device_3_inp_layout"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="wrap_content"
                         android:layout_weight="2"
                         android:layout_height="wrap_content"
-                        android:hint="Device Address"
+                        android:hint="@string/device_address"
                         android:imeOptions="actionDone">
 
                         <com.google.android.material.textfield.TextInputEditText
@@ -224,6 +232,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:orientation="horizontal">
 
             <LinearLayout
@@ -357,6 +366,7 @@
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -477,7 +487,6 @@
                     android:padding="10dp"
                     android:shadowColor="@color/colorPrimaryLight"
                     android:text="@string/sync"
-                    android:textSize="18sp"
                     app:rippleColor="@color/black_semi_transparent" />
 
                 <com.google.android.material.button.MaterialButton
@@ -492,7 +501,6 @@
                     android:padding="10dp"
                     android:shadowColor="@color/colorPrimaryLight"
                     android:text="@string/submit"
-                    android:textSize="18sp"
                     app:rippleColor="@color/black_semi_transparent" />
 
                 <com.google.android.material.button.MaterialButton
