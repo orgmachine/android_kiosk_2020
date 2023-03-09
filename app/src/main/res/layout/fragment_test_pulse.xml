@@ -68,7 +68,7 @@
                             android:id="@+id/img_instruction"
                             android:layout_width="200dp"
                             android:layout_height="200dp"
-                            android:src="@drawable/ic_pulse"
+                            android:src="@drawable/pluse_img"
                             android:layout_margin="20dp"/>
 
                     </LinearLayout>
@@ -83,7 +83,7 @@
                             android:layout_height="wrap_content"
                             android:textSize="24sp"
                             android:textColor="@color/colorPrimary"
-                            android:text="Instruction"
+                            android:text="@string/instruction"
                             android:padding="5dp"/>
 
                         <TextView
